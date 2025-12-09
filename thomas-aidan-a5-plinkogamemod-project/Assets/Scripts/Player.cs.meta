@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2fddf7a9ad5ff7b48a5610598da2626b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - disc: {fileID: 812496254654732695, guid: 51ef895ad63289e44b4517ed99212d32, type: 3}
+  - cameraFollow: {instanceID: 0}
+  - discsLeft: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
