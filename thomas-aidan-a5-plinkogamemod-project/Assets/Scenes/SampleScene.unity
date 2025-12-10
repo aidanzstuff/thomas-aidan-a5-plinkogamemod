@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   speed: 7.76
-  disc: {fileID: 8461627973414118606, guid: 94f1f243538c9a44eb8a28a2426faffe, type: 3}
+  disc: {fileID: 1216549717}
   cameraFollow: {fileID: 519420033}
   dispense: 0
   discsLeft: {fileID: 2056994289}
@@ -17241,6 +17241,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1216549717 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 812496254654732695, guid: 51ef895ad63289e44b4517ed99212d32, type: 3}
+  m_PrefabInstance: {fileID: 1903045260912692571}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1222744683
 GameObject:
   m_ObjectHideFlags: 0
@@ -17713,6 +17718,8 @@ GameObject:
   - component: {fileID: 1284330179}
   - component: {fileID: 1284330178}
   - component: {fileID: 1284330177}
+  - component: {fileID: 1284330181}
+  - component: {fileID: 1284330180}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -17834,6 +17841,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1284330175}
   m_CullTransparentMesh: 1
+--- !u!114 &1284330180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284330175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0612e366d8ffa5b498d97f205022c637, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiscsLeft
+  dlDisplay: {fileID: 0}
+  outOfDiscsText: {fileID: 0}
+  restartButton: {fileID: 0}
+  discs: 5
+--- !u!114 &1284330181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284330175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1261da4d463e03c4ea09a89e32d9928e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RestartButton
 --- !u!1 &1295215850
 GameObject:
   m_ObjectHideFlags: 0
@@ -28294,8 +28329,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DiscsLeft
   dlDisplay: {fileID: 2056994287}
   outOfDiscsText: {fileID: 1145609408}
+  restartButton: {fileID: 1284330175}
   discs: 5
-  restartButton: {fileID: 0}
 --- !u!1 &2059247044
 GameObject:
   m_ObjectHideFlags: 0

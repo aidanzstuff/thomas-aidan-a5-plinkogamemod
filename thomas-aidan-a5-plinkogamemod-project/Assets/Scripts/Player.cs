@@ -25,16 +25,25 @@ public class Player : MonoBehaviour
 
     void DropDisc()
     {
-        // Don't drop a disc if none are left
-        if (discsLeft.discs <= 0)
-            return;
-
         if (Input.GetButtonDown("Fire1") && activeDisc == null)
         {
+            if (discsLeft == null)
+            {
+                Debug.LogError("[Player] discsLeft reference is null! Assign it in the Inspector.", this);
+                return;
+            }
+
+            if (discsLeft.discs <= 0)
+            {
+                Debug.Log("[Player] Tried to drop but no discs left.");
+                return;
+            }
+
             Vector3 position = transform.position;
             Quaternion rotation = transform.rotation;
             activeDisc = Instantiate(disc, position, rotation);
-            cameraFollow.FollowDisc(activeDisc);
+            cameraFollow?.FollowDisc(activeDisc);
+
             discsLeft.SubDiscs(1);
         }
     }
