@@ -1,39 +1,29 @@
+using TMPro;
 using UnityEngine;
 
 public class PrizeManager : MonoBehaviour
 {
     public int maxScore = 500;
+    public TMP_Text prizeText;  // assign in Inspector
 
     public void CheckPrize(int points)
     {
         string prize;
 
         if (points >= maxScore)
-        {
-            prize = "Jackpot!";
-        }
+            prize = "You win a diamond medal!";
         else if (points >= 400)
-        {
-            prize = "Huge Prize!";
-        }
+            prize = "You win a gold medal!";
         else if (points >= 300)
-        {
-            prize = "Big Prize!";
-        }
+            prize = "You win a silver medal!";
         else if (points >= 200)
-        {
-            prize = "Medium Prize!";
-        }
-        else if (points >= 100)
-        {
-            prize = "Small Prize!";
-        }
+            prize = "You win a bronze medal!";
         else
-        {
-            prize = "Better luck next time!";
-        }
+            prize = "Unfortunately you did not win, better luck next time!";
 
-        Debug.Log($"You scored {points} points. You win: {prize}");
-        // Optional: show on UI here
+        if (prizeText != null)
+            prizeText.text = prize;
+        else
+            Debug.LogWarning("Prize Text not assigned!");
     }
 }
