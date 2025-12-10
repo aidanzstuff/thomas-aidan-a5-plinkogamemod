@@ -19,6 +19,6 @@ public class ScoreKeeper : MonoBehaviour
 
     public void UpdateScoreDisplay()
     {
-        scoreDisplay.text = $"MONEY: ${score}";
+        scoreDisplay.text = $"SCORE: {score}";
     }
 }
